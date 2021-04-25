@@ -7,7 +7,8 @@ const express = require('express');
 const server = express();
 
 // waking up the server to answers the requiests that comes in the (port) => store the port in variable and make the server listen to it .
-const PORT = 3000; //DECLARE PORT AND MAKE IT CAPITAL 
+const PORT = process.env.PORT || 3000; //DECLARE PORT AND MAKE IT CAPITAL
+//process.env.PORT to set up heroku port 
 //make the server listen to this port 
 server.listen(PORT,()=>{
     console.log(`Listen to this port: ${PORT}`);
